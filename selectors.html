@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.universal */
+
+        *{margin:0px;color: rgb(4, 97, 4);}
+
+        h1{margin:10px;color:#2124c5}
+
+        #silver
+        {
+            color: gray;
+            font-size: 100px;
+        }
+
+        #gold
+        {
+            color:gold;
+            font-size:50px
+        }
+
+        .a3
+        {
+            color:#800000;
+            font-size: 20px;
+        }
+      
+
+           ol li
+        {
+            color:blue;
+            font-size: 20px;
+        }
+
+        ol>li
+        {
+            color:rgb(138, 42, 4);
+            font-size:20px
+        }
+
+        input[type="password"]
+        {
+            background-color: red;
+            color: white;
+            font-size: 13.4px;
+        }
+
+        [type="submit"]
+        {
+            background-color: pink;
+            color: red;
+        }
+
+        /*group ma jenu group bane a rite prio set thai*/
+         /* high prio. id-(#gold) >> Attribute-((agal koy pn tage lakhyu hoy to prio vadhare class karta)[type="password"]) >> class-(.a3) >> element-(h1) >> universal-(*) >> */
+
+    </style>
+</head>
+<body bgcolor="skyblue">
+    <h1 class="a3" id="silver">Selectors</h1>
+    <p id="gold">hello</p> <!--1 id 1 nej apay , biji var apva mate new style banavi pade-->
+    <p class="a3">hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+
+<br>
+    <ol>
+        <li>S1</li>
+        <li>S2
+            <ul>
+                <li>S22</li>
+                <li>S23</li>
+            </ul>
+        </li>
+        <li>S3</li>
+    </ol>
+
+    <form method="get" action="#">
+        <input type="text" placeholder="Enter Name">
+        <input type="password" placeholder="Enter password">
+        <input type="submit" >
+
+    </form>
+</body>
+</html>

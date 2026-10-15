@@ -1,0 +1,197 @@
+<!--
+1. a:link(unvisited link)
+2. a.visited
+3. :hover
+4. :active
+5. :focus
+6. :checked
+7. :not
+
+ELEMENTS:-
+1. ::first-line
+2. ::first-latter
+3. ::before
+4. ::after
+5. ::marker
+6. ::selection
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        a:link{
+            color:green;
+            text-decoration: none;
+            font-size: 40px;
+            font-weight:900;
+        
+        }
+         a:visited{
+            color: hotpink;
+            
+        } 
+        a:hover{
+            background-color: bisque;
+            cursor:progress;
+        }
+        a:active{
+            color:gray;
+            font-size: 20px;
+        }
+        div{
+            width: 400px;
+            height: 400px;
+
+        }
+        #a{height: 200px;
+            width: 200px;
+        border-style: solid;
+        border-width: 5px;
+        border-color: black;
+        text-align: center;
+        font-size: 30px;
+    }
+    #a:hover{
+        height: 400px;
+        width: 400px;
+        background-color: aqua;
+    }
+    #a:active{
+        background-color: red;
+    }
+    [type="text"]:focus{
+        background-color: navy;
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase
+    }
+    [type="checkbox"]:checked+label{
+        color: green;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    
+
+     ol li:not(.s){
+        color:brown;
+        font-size: 24px;
+    }
+    
+    ol li:nth-child(even){
+        color:green;
+        text-decoration: underline;
+    }
+
+    table tr:nth-child(even){
+        
+        background-color: pink;
+    }
+        table tr:nth-child(odd){
+        
+        background-color: aqua;
+    }
+
+    P::first-line{
+        color: yellow;
+        background-color: navy;
+    }
+    P::first-letter{
+        font-size: 50px;
+        text-transform: uppercase;
+        color: pink;
+        background-color: orangered;
+    }
+    h1::before{
+        content: "😮";
+        color: red;
+    }
+    h1::after{
+        content: url("Desert.jpg");
+        
+    }
+    ol li::marker{
+        font-size: 35px;
+        color: grey;
+        
+    }
+    ol li{
+        list-style: square;
+    }
+
+    p::selection{
+        background-color: black;
+        color: lime;
+    }
+
+
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com" >google.com</a>
+    <br>
+    <a href="#">#$%^&*</a>
+
+        <div id="a">Hello</div>
+
+        <form method="get">
+            <fieldset>
+                <legend>login</legend>
+                <label>username:</label>
+                <input type="text">
+
+                <br><br>
+                <input type="checkbox" name="agree" required>
+                <label>Agree to terms</label>
+                 <br><br>
+
+                 <input type="submit" >
+                 <input type="reset">
+            </fieldset>
+        </form>
+
+        <h2>List of subjects</h2>
+        <ol>
+            <li>FSD-I</li>
+            <li class="s">Python-I</li>
+            <li>DE</li>
+            <li>Ps</li>
+        </ol>
+
+        <table border="2" width="400" height="300">
+            <tr align="center">
+                <td>1</td>
+                <td>a</td>
+                <td>f</td>
+            </tr>
+
+           <tr align="center">
+                <td>2</td>
+                <td>b</td>
+                <td>g</td>
+            </tr>
+
+           <tr align="center">
+                <td>3</td>
+                <td>c</td>
+                <td>h</td>
+            </tr>
+           <tr align="center">
+                <td>4</td>
+                <td>d</td>
+                <td>i</td>
+            </tr>
+
+           <tr align="center">
+                <td>5</td>
+                <td>e</td>
+                <td>j</td>
+            </tr>
+        </table>
+        <h1>Pseudo elements</h1>
+        <p>lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus consectetur possimus, tenetur debitis rem earum dolorum quam aliquid reiciendis laborum velit nisi, quidem eum nihil totam incidunt quos consequuntur ut nobis? Ullam illum illo, odio architecto delectus laborum repudiandae veniam, officiis provident dolorum magni harum esse voluptatibus fugiat eveniet ex.</p>
+</body>
+</html>
